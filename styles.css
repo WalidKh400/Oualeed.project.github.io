@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://i.pinimg.com/originals/ad/ce/24/adce2475102baaafacd396bb85d31ac8.jpg') repeat-x;
+    background-size: cover;
+    animation: moveBackground 20s linear infinite;
+    direction: rtl;
+    color: #fff;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -2000px 0;
+    }
+}
+
+header {
+    background-color: rgba(76, 175, 80, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.calculator {
+    display: inline-block;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.calculator input {
+    width: 100%;
+    height: 40px;
+    text-align: right;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #666;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-gap: 10px;
+}
+
+.calculator button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    background-color: #555;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background-color: #777;
+}
+
+.counter-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.counter {
+    background-color: rgba(221, 221, 221, 0.8);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 30px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counter:hover {
+    background-color: rgba(187, 187, 187, 0.8);
+}
+
+.counter:active {
+    box-shadow: 0 0 20px 5px green; /* Green glow effect */
+}
+
+.counter.zero {
+    background-color: red;
+    color: white;
+}
+
+.middle-counter {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 24px;
+    background-color: rgba(221, 221, 221, 0.8);
+    border-radius: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+}
+
+.middle-counter.zero {
+    background-color: red;
+    color: white;
+}
+
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: yellow;
+    border-radius: 50%;
+    opacity: 0;
+    animation: starAnimation 1s ease-out forwards;
+}
+
+@keyframes starAnimation {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+        background-color: yellow;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+        background-color: green;
+    }
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    color: white;
+}

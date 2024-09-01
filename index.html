@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walid's World</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Walid's World</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#islamic-counters">Islamic Counters</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Walid's World</h2>
+            <p>Explore the world of knowledge.</p>
+        </section>
+
+        <section id="calculator">
+            <h2>Walid's Calculator</h2>
+            <div class="calculator">
+                <input type="text" id="display" disabled>
+                <div class="buttons">
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="appendDisplay('7')">7</button>
+                    <button onclick="appendDisplay('8')">8</button>
+                    <button onclick="appendDisplay('9')">9</button>
+                    <button onclick="appendDisplay('/')">/</button>
+
+                    <button onclick="appendDisplay('4')">4</button>
+                    <button onclick="appendDisplay('5')">5</button>
+                    <button onclick="appendDisplay('6')">6</button>
+                    <button onclick="appendDisplay('*')">*</button>
+
+                    <button onclick="appendDisplay('1')">1</button>
+                    <button onclick="appendDisplay('2')">2</button>
+                    <button onclick="appendDisplay('3')">3</button>
+                    <button onclick="appendDisplay('-')">-</button>
+
+                    <button onclick="appendDisplay('0')">0</button>
+                    <button onclick="appendDisplay('.')">.</button>
+                    <button onclick="calculate()">=</button>
+                    <button onclick="appendDisplay('+')">+</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="islamic-counters">
+            <h2>منصة اليقين بالله الاسلامية</h2>
+            <div class="counter-container">
+                <div class="counter" id="counter1" onclick="decreaseCounter('counter1')">
+                    <span class="count">33</span>
+                    <span class="label">الحمدلله</span>
+                </div>
+                <div class="counter" id="counter2" onclick="decreaseCounter('counter2')">
+                    <span class="count">33</span>
+                    <span class="label">سبحان الله</span>
+                </div>
+                <div class="counter" id="counter3" onclick="decreaseCounter('counter3')">
+                    <span class="count">33</span>
+                    <span class="label">الله اكبر</span>
+                </div>
+            </div>
+
+            <div class="middle-counter" id="middleCounter" onclick="decreaseCounter('middleCounter')">
+                <span class="count">1</span>
+                <span class="label">لا اله الا الله وحده لا شريك له، له الملك و له الحمد و هو على كل شيء قدير</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Walid's World. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
